@@ -1,14 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Covers from "../components/Covers.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <Card albumname="Paradise" albumnLenght="21" price="12.99" />
-	<Card albumname="Purgatorio" albumnLenght="20" price="12.99" />
-	<Card albumname="Inferno" albumnLenght="23" price="12.99" />
-
+    <Covers title="Paradise" price="12.99" url="/src/images/cover1.jpg" 
+      />
+      <Covers title="Purgatory" price="12.99" url="/src/images/cover2.png" 
+      />
+      <Covers title="Inferno" price="12.99" url="/src/images/cover3.jpg" 
+      />
 
   </main>
 </Layout>
