@@ -17,14 +17,16 @@ const {title,price,url} = Astro.props;
 </head>
 <body>
     <section>
-        <div>
-            <img src={url} alt="Cover Number" class=" content-center rounded-xl max-w-screen-md transition duration-300 ease-in-out hover:scale-110">
-            <div class="text-balance text-center">
-                <h1 class="  ">{title}</h1>
-                <h2 >{price}</h2>
-            </div>
+        <div class=" flex justify-center items-center h-100">
+            <img src={url} alt="Cover Number" class=" rounded-xl transition duration-300 ease-in-out hover:scale-110 max-w-full max-h-full object-contain gap-4">
+           
          
         </div>
+        <div class="text-balance text-center">
+            <h1>{title}</h1>
+            <h2 >{price}</h2>  
+        </div>
+      
     </section>
     <slot />
 
