@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Covers from "../components/Covers.astro";
 import Header from "../components/Header.astro";
+import Sections from "../components/Sections.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -16,8 +17,16 @@ import Header from "../components/Header.astro";
       <Covers title="Inferno" price="12.99" url="/src/images/cover3.jpg" 
       />
     </div>
-   
+  <div class=" text-center grid grid-flow-col gap-4">
+      <Sections section="Live"/>
+      <Sections section="Merch"/>
+      <Sections section="Help"/>
+      <Sections section="Updates"/>
 
+    </div>
+
+
+    
   </main>
 </Layout>
 

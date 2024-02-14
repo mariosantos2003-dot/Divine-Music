@@ -3,6 +3,7 @@ interface Covers {
   title: String;
   price: String;
   url: String;
+
 }
 
 const { title, price, url } = Astro.props;
@@ -21,12 +22,12 @@ const { title, price, url } = Astro.props;
         <img
           src={url}
           alt="Cover Number"
-          class="rounded-xl transition duration-300 ease-in-out hover:scale-110 max-w-full max-h-full object-contain gap-4"
+          class="rounded-xl border-slate-300 transition duration-300 ease-in-out hover:scale-110 max-w-full max-h-full object-contain gap-4"
         />
       </div>
       <div class="text-balance text-center">
         <h1>{title}</h1>
-        <h2>{price}</h2>
+        <button class=" bg-fuchsia-100 hover:bg-fuchsia-200 duration-300 ease-in-out rounded-xl gap-3 text-black">{price}</button>
      
        
       </div>
