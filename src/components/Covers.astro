@@ -1,34 +1,36 @@
 ---
-interface Covers{
-    title :String;
-    price : String;
-    url: String
+interface Covers {
+  title: String;
+  price: String;
+  url: String;
 }
 
-const {title,price,url} = Astro.props;
+const { title, price, url } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covers</title>
-</head>
-<body>
+  </head>
+  <body>
     <section>
-        <div class=" flex justify-center items-center h-100">
-            <img src={url} alt="Cover Number" class=" rounded-xl transition duration-300 ease-in-out hover:scale-110 max-w-full max-h-full object-contain gap-4">
-           
-         
-        </div>
-        <div class="text-balance text-center">
-            <h1>{title}</h1>
-            <h2 >{price}</h2>  
-        </div>
-      
+      <div class="flex justify-center items-center h-100">
+        <img
+          src={url}
+          alt="Cover Number"
+          class="rounded-xl transition duration-300 ease-in-out hover:scale-110 max-w-full max-h-full object-contain gap-4"
+        />
+      </div>
+      <div class="text-balance text-center">
+        <h1>{title}</h1>
+        <h2>{price}</h2>
+     
+       
+      </div>
     </section>
     <slot />
-
-</body>
+  </body>
 </html>
