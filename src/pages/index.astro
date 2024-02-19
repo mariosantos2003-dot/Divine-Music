@@ -6,7 +6,7 @@ import Sections from "../components/Sections.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Divine">
   <Header title="Divine" description="The Album of your dreams" />
   <main>
     <div>
@@ -18,11 +18,11 @@ import Footer from "../components/Footer.astro";
       <Covers title="Inferno" price="12.99" url="/src/images/cover3.jpg" 
       />
     </div>
-  <div class=" text-center grid grid-flow-col gap-4">
-      <Sections section="Live"/>
-      <Sections section="Merch"/>
-      <Sections section="Help"/>
+  <div class=" text-center grid grid-flow-col gap-4 pt-10">
+      <Sections section="Live" link="/Live"/>
+      <Sections section="Merch" link="/Merch"/>
       <Sections section="Updates"/>
+
 
     </div>
 
@@ -34,7 +34,7 @@ import Footer from "../components/Footer.astro";
   </footer>
 </Layout>
 
-<style>
+<style is:global>
   main {
     margin: auto;
     padding: 1rem;

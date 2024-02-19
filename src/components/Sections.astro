@@ -1,10 +1,10 @@
 ---
 interface Sections{
     section:string;
-
+    link:string;
 }
 
-const {section} =Astro.props;
+const {section,link} =Astro.props;
 ---
 
 
@@ -18,7 +18,7 @@ const {section} =Astro.props;
  
 
   <body>
-    <p class="font-mono">{section}</p>
+    <a class="font-mono"href={link}>{section}</a>
 
 
     <slot />
