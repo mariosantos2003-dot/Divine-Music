@@ -10,8 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^3.0.10",
     "@astrojs/tailwind": "^5.1.0",
+    "@react-three/drei": "^9.99.3",
+    "@react-three/fiber": "^8.15.16",
     "astro": "^4.3.5",
-    "tailwindcss": "^3.4.1"
+    "react-three-fiber": "^6.0.13",
+    "tailwindcss": "^3.4.1",
+    "three": "^0.161.0"
   }
 }
