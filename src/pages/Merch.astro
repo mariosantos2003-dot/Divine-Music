@@ -4,15 +4,20 @@ import Covers from "../components/Covers.astro";
 import Header from "../components/Header.astro";
 import Sections from "../components/Sections.astro";
 import Footer from "../components/Footer.astro";
+import MerchItems from '../components/MerchItems.astro'
+
+
 ---
 
 <Layout title="Divine">
   <Header title="Divine" description="The Album of your dreams" />
   <main>
-    <div class="grid grid-rows-4 grid-cols-2 grid-flow-col p-4 rounded-md bg-white">
-        <div>Test</div>
-        <div>09</div>
-      </div>
+    
+      <section>
+       <MerchItems  nameItem="Hoodie 1" price="49.99" url="src\images\cover_paradise.webp"
+       />
+      </section>
+ 
   </main>
   <footer>
     <Footer />

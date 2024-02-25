@@ -1,0 +1,32 @@
+---
+interface MerchItems {
+  nameItem: string;
+  url: string;
+  price: number;
+}
+const { nameItem, price, url } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MerchItems</title>
+  </head>
+  <body>
+    <main>
+      <div class="grid grid-flow-col gap-4 mt-4">
+        <div>
+          <img src={url} />
+        </div>
+        <div>
+          <h4>{nameItem}</h4>
+          <h6>{price}</h6>
+        </div>
+      </div>
+    </main>
+
+    <slot />
+  </body>
+</html>

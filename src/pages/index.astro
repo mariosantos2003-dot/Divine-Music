@@ -9,39 +9,49 @@ import Footer from "../components/Footer.astro";
 <Layout title="Divine">
   <Header title="Divine" description="The Album of your dreams" />
   <main>
-    <div>
+    <article>
+      <section class="gap-5">
+        <Covers
+          title="Paradise"
+          price="12.99"
+          url="/src/images/cover_paradise.webp"
+        />
+      </section>
+      <section>
+        <Covers
+          title="Purgatory"
+          price="12.99"
+          url="/src/images/cover_paradise.webp"
+        />
+      </section>
+      <section>
+        <Covers
+          title="Inferno"
+          price="12.99"
+          url="/src/images/cover_paradise.webp"
+        />
+      </section>
+    </article>
 
-      <Covers title="Paradise" price="12.99" url="/src/images/cover1.jpg" 
-      />
-      <Covers title="Purgatory" price="12.99" url="/src/images/cover2.png" 
-      />
-      <Covers title="Inferno" price="12.99" url="/src/images/cover3.jpg" 
-      />
+    <div class="text-center grid grid-flow-col gap-4 pt-10">
+      <Sections section="Live" link="/Live" />
+      <Sections section="Merch" link="/Merch" />
+      <Sections section="Updates" />
     </div>
-  <div class=" text-center grid grid-flow-col gap-4 pt-10">
-      <Sections section="Live" link="/Live"/>
-      <Sections section="Merch" link="/Merch"/>
-      <Sections section="Updates"/>
-
-
-    </div>
-
-
-    
+    <footer>
+      <Footer />
+    </footer>
   </main>
-  <footer>
-    <Footer/>
-  </footer>
-</Layout>
 
-<style is:global>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-</style>
+  <style is:global>
+    main {
+      margin: auto;
+      padding: 1rem;
+      width: 800px;
+      max-width: calc(100% - 2rem);
+      color: white;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</Layout>
