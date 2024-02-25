@@ -4,22 +4,60 @@ import Covers from "../components/Covers.astro";
 import Header from "../components/Header.astro";
 import Sections from "../components/Sections.astro";
 import Footer from "../components/Footer.astro";
-import MerchItems from '../components/MerchItems.astro'
-
-
+import MerchItems from "../components/MerchItems.astro";
 ---
 
 <Layout title="Divine">
   <Header title="Divine" description="The Album of your dreams" />
   <main>
-    
-      <section>
-       <MerchItems  nameItem="Hoodie 1" price="49.99" url="src\images\cover_paradise.webp"
-       />
-      </section>
- 
+    <section>
+      <div class=" justify-center flex gap-4">
+        <div class="">
+          <MerchItems
+            nameItem="Hoodie 1"
+            price="49.99"
+            url="src/images/merch/hoodie/hodietest1.webp"
+          />
+        </div>
+        <div >
+          <MerchItems
+            nameItem="Hoodie 2"
+            price="49.99"
+            url="src/images/merch/hoodie/hodietest1.webp"
+          />
+        </div>
+        <div class="">
+          <MerchItems
+            nameItem="Tee  1"
+            price="29.99"
+            url="src/images/merch/hoodie/hodietest1.webp"
+          />
+        </div>
+        <div class="">
+          <MerchItems
+            nameItem="Tee  2"
+            price="29.99"
+            url="src/images/merch/hoodie/hodietest1.webp"
+          />
+        </div>
+        <div>
+          <MerchItems
+            nameItem="Cap  1"
+            price="19.99"
+            url="src/images/merch/hoodie/hodietest1.webp"
+          />
+        </div>
+        <div>
+          <MerchItems
+            nameItem="Cap  2"
+            price="19.99"
+            url="src/images/merch/hoodie/hodietest1.webp"
+          />
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
+  <footer class=" sticky">
     <Footer />
   </footer>
 </Layout>
