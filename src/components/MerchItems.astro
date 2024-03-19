@@ -7,26 +7,25 @@ interface MerchItems {
 const { nameItem, price, url } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MerchItems</title>
-  </head>
-  <body>
-    <main>
-      <div>
-        <div class=" grid grid-flow-row grid-rows-3" > 
-          <img src={url} class="rounded-xl mt-2 " />
-          <div>
-            <h4 class="text-white text-center font-mono">{nameItem}</h4>
-            <h6 class="text-white text-center font-serif">{price}</h6>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MerchItems</title>
+</head>
+<body>
+  <main>
+    <div class="gap-2">
+      <div class="gap-2">
+        <img src={url} class="rounded-xl mt-2 mx-auto" />
       </div>
-    </main>
-
-    <slot />
-  </body>
+     
+      <div class="text-center gap-2">
+        <h4 class="text-white font-mono">{nameItem}</h4>
+        <h6 class="text-white font-serif">{price}</h6>
+      </div>
+    </div>
+  </main>
+</body>
 </html>
