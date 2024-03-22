@@ -4,31 +4,37 @@ import Covers from "../components/Covers.astro";
 import Header from "../components/Header.astro";
 import Sections from "../components/Sections.astro";
 import Footer from "../components/Footer.astro";
+import SideLetters from "../components/SideLetters.astro";
 ---
 
 <Layout title="Divine">
   <Header title="Divine" description="The Album of your dreams" />
-  <main>
+
+  <main class="relative">
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+      <source src="src/images/videobg/bg.mp4" type="video/mp4" />
+    </video>
     <article>
       <section class="gap-5">
         <Covers
           title="Paradise"
           price="12.99"
-          url="/src/images/cover_paradise.webp"
+          url="/src/images/covers/cover_inferno.webp"
         />
       </section>
       <section>
         <Covers
           title="Purgatory"
           price="12.99"
-          url="/src/images/cover__purgatory.webp"
+          url="/src/images/covers/cover_purgatory.webp"
         />
       </section>
       <section>
         <Covers
           title="Inferno"
           price="12.99"
-          url="/src/images/cover_paradise.webp"
+          url="/src/images/covers/cover_paradise.webp"
         />
       </section>
     </article>
@@ -38,20 +44,10 @@ import Footer from "../components/Footer.astro";
       <Sections section="Merch" link="/Merch" />
       <Sections section="Updates" />
     </div>
-    <footer>
-      <Footer />
-    </footer>
+  </div>
   </main>
 
-  <style is:global>
-    main {
-      margin: auto;
-      padding: 1rem;
-      width: 800px;
-      max-width: calc(100% - 2rem);
-      color: white;
-      font-size: 20px;
-      line-height: 1.6;
-    }
-  </style>
+  <footer>
+    <Footer />
+  </footer>
 </Layout>
