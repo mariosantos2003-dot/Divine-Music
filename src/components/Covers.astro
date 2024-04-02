@@ -60,7 +60,7 @@ const { title, price, url } = Astro.props;
       margin-bottom: 10px;
     }
     
-    .cover-info a {
+    .cover-info button {
       display: inline-block;
       padding: 8px 20px;
       background-color: purple;
@@ -70,8 +70,18 @@ const { title, price, url } = Astro.props;
       transition: background-color 0.3s ease;
     }
     
-    .cover-info a:hover {
+    .cover-info button:hover {
       background-color: #6f42c1;
+      
+
+    }
+    .cover-info button:hover span{
+      display: none;
+    }
+    button:hover::before{
+      content: "ADD TO CART";
+      transition: 0.2s ease-out;
+     
     }
   </style>
 </head>
@@ -81,7 +91,7 @@ const { title, price, url } = Astro.props;
       <img src={url} alt="Cover Number" class=" max-w-full max-h-full object-contain rounded-xl"/>
       <div class="cover-info">
         <h1>{title}</h1>
-        <a href="#">{price}</a>
+        <button><span>{price}</span></button>
       </div>
     </div>
   </section>

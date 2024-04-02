@@ -1,0 +1,25 @@
+---
+interface Countdown{
+    
+}
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class=" relative flex justify-center items-center mt-10">
+        <span class="countdown font-mono text-2xl">
+            <span style="--value:10;"></span>:
+            <span style="--value:12;"></span>:
+            <span style="--value:24;"></span>
+          </span>
+    </div>
+    <slot/>
+</body>
+</html>

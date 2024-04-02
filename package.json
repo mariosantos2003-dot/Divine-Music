@@ -18,5 +18,8 @@
     "react-three-fiber": "^6.0.13",
     "tailwindcss": "^3.4.1",
     "three": "^0.161.0"
+  },
+  "devDependencies": {
+    "daisyui": "^4.9.0"
   }
 }

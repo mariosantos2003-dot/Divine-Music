@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Sections from "../components/Sections.astro";
 import Footer from "../components/Footer.astro";
 import SideLetters from "../components/SideLetters.astro";
+import Countdown from "../components/Countdown.astro";
 ---
 
 <Layout title="Divine">
@@ -25,7 +26,9 @@ import SideLetters from "../components/SideLetters.astro";
           price="12.99"
           url="/src/images/covers/cover_inferno.webp"
         />
+  
       </section>
+      <Countdown/>
       <section>
         <Covers
           title="Purgatory"
@@ -33,6 +36,7 @@ import SideLetters from "../components/SideLetters.astro";
           url="/src/images/covers/cover_purgatory.webp"
         />
       </section>
+      <Countdown/>
       <section>
         <Covers
           title="Inferno"
@@ -40,6 +44,7 @@ import SideLetters from "../components/SideLetters.astro";
           url="/src/images/covers/cover_paradise.webp"
         />
       </section>
+      <Countdown/>
     </article>
 
     <div class="text-center grid grid-flow-col gap-4 pt-10">
