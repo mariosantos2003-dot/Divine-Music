@@ -26,7 +26,8 @@ const { title, price, url } = Astro.props;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      margin-top: 40px;
+      margin-top: 100px;
+      
     }
     
     .cover-container:hover img {
@@ -46,6 +47,7 @@ const { title, price, url } = Astro.props;
       opacity: 0;
       transition: opacity 0.3s ease;
       font-family: 'TirelesslyLoveYou';
+      
     }
     
     .cover-container:hover .cover-info {
@@ -76,7 +78,7 @@ const { title, price, url } = Astro.props;
 <body>
   <section>
     <div class="cover-container">
-      <img src={url} alt="Cover Number" class=" mt-4 max-w-full max-h-full object-contain rounded-xl"/>
+      <img src={url} alt="Cover Number" class=" max-w-full max-h-full object-contain rounded-xl"/>
       <div class="cover-info">
         <h1>{title}</h1>
         <a href="#">{price}</a>

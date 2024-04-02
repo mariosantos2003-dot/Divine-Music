@@ -14,7 +14,6 @@ const { title, description } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Header</title>
   <style>
-
     @font-face {
       font-family: 'TirelesslyLoveYou';
       src: url('../images/fonts/TirelesslyLoveYou.otf');
@@ -24,7 +23,7 @@ const { title, description } = Astro.props;
       overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
     }
     header {
-      background-color:black;
+      background-color: black;
       color: #fff;
       padding: 20px 0;
       transition: all 0.5s ease-in;
@@ -38,7 +37,7 @@ const { title, description } = Astro.props;
       font-family: 'TirelesslyLoveYou';
     }
     .small {
-      padding: 10px 0;
+      padding: 5px 0;
       font-size: 18px;
     }
     .content {
@@ -54,28 +53,30 @@ const { title, description } = Astro.props;
     </div>
   </header>
 
-  <div class="content">
-    <!-- Your page content goes here -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
-    <!-- Add more content as needed -->
-  </div>
 
   <script>
- window.onscroll = function() {scrollFunction()};
+    let isHeaderExpanded = false;
 
-function scrollFunction() {
-  const header = document.getElementById("header") as HTMLElement;
-  const content = document.getElementsByClassName("content")[0] as HTMLElement;
+    window.onscroll = function() {scrollFunction()};
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    header.classList.add("small");
-    content.style.marginTop = "80px"; // Ajusta según la altura del header
-  } else {
-    header.classList.remove("small");
-    content.style.marginTop = "0";
-  }
-}
+    function scrollFunction() {
+      const header = document.getElementById("header") as HTMLElement;
+      const content = document.getElementsByClassName("content")[0] as HTMLElement;
 
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        if (!isHeaderExpanded) {
+          header.classList.add("small");
+          content.style.marginTop = "80px"; // Ajusta según la altura del header
+          isHeaderExpanded = true;
+        }
+      } else {
+        if (isHeaderExpanded) {
+          header.classList.remove("small");
+          content.style.marginTop = "0";
+          isHeaderExpanded = false;
+        }
+      }
+    }
   </script>
 </body>
 </html>
