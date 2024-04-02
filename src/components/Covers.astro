@@ -16,12 +16,17 @@ const { title, price, url } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Covers</title>
   <style>
+     @font-face {
+      font-family: 'TirelesslyLoveYou';
+      src: url('../images/fonts/TirelesslyLoveYou.otf');
+    }
     .cover-container {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      margin-top: 40px;
     }
     
     .cover-container:hover img {
@@ -40,6 +45,7 @@ const { title, price, url } = Astro.props;
       align-items: center;
       opacity: 0;
       transition: opacity 0.3s ease;
+      font-family: 'TirelesslyLoveYou';
     }
     
     .cover-container:hover .cover-info {
