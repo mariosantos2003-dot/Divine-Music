@@ -10,6 +10,9 @@ import MerchItems from "../components/MerchItems.astro";
 <Layout title="Divine">
   <Header title="Divine" description="The Album of your dreams" />
   <main class="flex justify-center">
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+      <source src="src/images/videobg/bg.mp4" type="video/mp4" />
+    </video>
     <section class="mt-8">
       <div class="grid grid-cols-2 gap-4 gap-y-2 mb-2">
         <MerchItems

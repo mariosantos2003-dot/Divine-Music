@@ -13,10 +13,14 @@ import Countdown from "../components/Countdown.astro";
 
   <main class="relative">
     <!-- Video de fondo -->
+    <div class="text-center grid grid-flow-col gap-4 pt-10 text-white">
+      <Sections section="Live" link="/Live" />
+      <Sections section="Merch" link="/Merch" />
+      <Sections section="Updates" />
+    </div>
     <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
       <source src="src/images/videobg/bg.mp4" type="video/mp4" />
     </video>
-
     <article>
       <section class="gap-5">
         <Covers
@@ -45,11 +49,7 @@ import Countdown from "../components/Countdown.astro";
       <Countdown/>
 
       <section>
-      <div class="text-center grid grid-flow-col gap-4 pt-10 text-white">
-        <Sections section="Live" link="/Live" />
-        <Sections section="Merch" link="/Merch" />
-        <Sections section="Updates" />
-      </div>
+
     </section>
     </article>
 
@@ -57,7 +57,7 @@ import Countdown from "../components/Countdown.astro";
   </div>
   </main>
 
-  <footer >
+  <footer class=" " >
     <Footer />
   </footer>
 </Layout>
