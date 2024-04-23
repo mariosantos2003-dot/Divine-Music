@@ -3,98 +3,73 @@ interface Covers {
   title: String;
   price: String;
   url: String;
-
 }
 
 const { title, price, url } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Covers</title>
-  <style>
-     @font-face {
-      font-family: 'TirelesslyLoveYou';
-      src: url('../images/fonts/TirelesslyLoveYou.otf');
-    }
-    .cover-container {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      margin-top: 200px;
-      
-    }
-    
-    .cover-container:hover img {
-      filter: blur(5px); /* Aplica un filtro de desenfoque al hacer hover */
-    }
-    
-    .cover-info {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      font-family: 'TirelesslyLoveYou';
-      
-    }
-    
-    .cover-container:hover .cover-info {
-      opacity: 1; /* Muestra la información al hacer hover */
-    }
-    
-    .cover-info h1 {
-      color: white;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-    
-    .cover-info button {
-      display: inline-block;
-      padding: 8px 20px;
-      background-color: purple;
-      color: white;
-      border-radius: 20px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    
-    .cover-info button:hover {
-      background-color: #6f42c1;
-      
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covers</title>
+    <style>
+      @font-face {
+        font-family: "TirelesslyLoveYou";
+        src: url("../images/fonts/TirelesslyLoveYou.otf");
+      }
+      .cover-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 200px;
+        object-fit: contain;
+        border-radius: 0.75rem;
+        max-width: 100%;
+        max-height: 100%;
+      }
 
-    }
-    .cover-info button:hover span{
-      display: none;
-    }
-    button:hover::before{
-      content: "ADD TO CART";
-      transition: 0.2s ease-out;
-     
-    }
-  </style>
-</head>
-<body>
-  <section>
-    <div class="cover-container">
-      <img src={url} alt="Cover Number" class=" max-w-full max-h-full object-contain rounded-xl"/>
-      <div class="cover-info">
-        <h1>{title}</h1>
-        <button><span>{price}</span></button>
-      </div>
-    </div>
-  </section>
-  <slot/>
-</body>
+      .cover-info{
+        text-align: center;
+        justify-content: center;
+        
+      }
+
+      .cover-info h1 {
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+
+      .cover-info button {
+        display: inline-block;
+        padding: 8px 20px;
+    
+        color: white;
+        border-radius: 20px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="cover-container">
+        <img src={url} alt="Cover Number" />
+        </div>
+        <div class="cover-info">
+          <h1>{title}</h1>
+          <button><span>{price}</span></button>
+        </div>
+    
+   
+    </section>
+    <slot />
+  </body>
 </html>
