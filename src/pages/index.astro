@@ -7,23 +7,16 @@ import Footer from "../components/Footer.astro";
 import SideLetters from "../components/SideLetters.astro";
 import Countdown from "../components/Countdown.astro";
 import SmokeBackground from "../components/SmokeBackground.astro";
+import PostHeader from "../components/PostHeader.astro";
 ---
 
 <Layout title="Divine">
-  <Header title="Divine" description="The Album of your dreams" />
-
+  <!-- <Header title="Divine" description="The Album of your dreams" />
+-->
   <main class="relative">
-    <!-- Video de fondo 
-    <div class="text-center grid grid-flow-col gap-4 pt-10 text-white">
-      <Sections section="Live" link="/Live" />
-      <Sections section="Merch" link="/Merch" />
-      <Sections section="Updates" />
-    </div>
-    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
-      <source src="src/images/videobg/bg.mp4" type="video/mp4" />
-    </video>
-    -->
-    <SmokeBackground/>
+
+    <SmokeBackground />
+    <PostHeader/>
     <article>
       <section class="gap-5">
         <Covers
@@ -31,9 +24,8 @@ import SmokeBackground from "../components/SmokeBackground.astro";
           price="12.99"
           url="/src/images/covers/cover_inferno.webp"
         />
-  
       </section>
-      <Countdown/>
+      <Countdown />
       <section>
         <Covers
           title="Purgatory"
@@ -41,7 +33,7 @@ import SmokeBackground from "../components/SmokeBackground.astro";
           url="/src/images/covers/cover_purgatory.webp"
         />
       </section>
-      <Countdown/>
+      <Countdown />
       <section>
         <Covers
           title="Inferno"
@@ -49,18 +41,13 @@ import SmokeBackground from "../components/SmokeBackground.astro";
           url="/src/images/covers/cover_paradise.webp"
         />
       </section>
-      <Countdown/>
+      <Countdown />
 
-      <section>
-
-    </section>
+      <section></section>
     </article>
-
-
-  </div>
   </main>
-
-  <footer class=" " >
-    <Footer />
-  </footer>
 </Layout>
+
+<footer class="">
+  <Footer />
+</footer>
