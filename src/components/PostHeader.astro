@@ -4,9 +4,10 @@ interface PostHeader{
   section2: string;
   link1: string;
   link2: string;
+  link3: string;
 
 }
-const { section1, section2,link1,link2 } = Astro.props;
+const { section1, section2,link1,link2,link3 } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -25,16 +26,16 @@ const { section1, section2,link1,link2 } = Astro.props;
       src: url('../images/fonts/Nightcore.otf');
     }
 
-    .header{
+    #header{
       font-family: "Header_font";
-      
+       
     }
 
  </style>
 </head>
 <body>
   <div class="text-white relative justify-center flex gap-10 pt-10  text-5xl">
-    <h1 class="header">Divine</h1>
+    <a href={link3} id="header" class=" animate__animated animate__slideInDown">Divine</a>
   </div>
     <div class="text-white relative justify-center flex gap-10 pt-10 font-mono  text-3xl">
         <a href={link1} class="animate__animated animate__fadeInLeft ">{section1}</a>
