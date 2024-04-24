@@ -1,4 +1,13 @@
+---
+interface PostHeader{
+  section1 :string;
+  section2: string;
+  link1: string;
+  link2: string;
 
+}
+const { section1, section2,link1,link2 } = Astro.props;
+---
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,11 +19,27 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+ <style>
+  @font-face {
+      font-family: 'Header_font';
+      src: url('../images/fonts/Nightcore.otf');
+    }
+
+    .header{
+      font-family: "Header_font";
+      
+    }
+
+ </style>
 </head>
 <body>
-    <div class="text-white relative justify-center flex gap-10 pt-10  text-3xl">
-        <a href="/Merch" class="animate__animated animate__fadeInLeft">Merch</a>
-        <a href="/Live" class="animate__animated animate__fadeInRight">Live</a>
+  <div class="text-white relative justify-center flex gap-10 pt-10  text-5xl">
+    <h1 class="header">Divine</h1>
+  </div>
+    <div class="text-white relative justify-center flex gap-10 pt-10 font-mono  text-3xl">
+        <a href={link1} class="animate__animated animate__fadeInLeft ">{section1}</a>
+       
+      <a href={link2} class="animate__animated animate__fadeInRight">{section2}</a>
         
       </div>
 </body>

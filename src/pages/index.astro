@@ -4,24 +4,26 @@ import Covers from "../components/Covers.astro";
 import Header from "../components/Header.astro";
 import Sections from "../components/Sections.astro";
 import Footer from "../components/Footer.astro";
-import SideLetters from "../components/SideLetters.astro";
 import Countdown from "../components/Countdown.astro";
 import SmokeBackground from "../components/SmokeBackground.astro";
 import PostHeader from "../components/PostHeader.astro";
 ---
 
 <Layout title="Divine">
-  <!-- <Header title="Divine" description="The Album of your dreams" />
--->
   <main class="relative">
 
     <SmokeBackground />
-    <PostHeader/>
+    <PostHeader
+    section1="Live"
+    section2="Merch"
+    link1="./Live"
+    link2="./Merch"
+    />
     <article>
       <section class="gap-5">
         <Covers
           title="Paradise"
-          price="12.99"
+          price="12.99$"
           url="/src/images/covers/cover_inferno.webp"
         />
       </section>
@@ -29,7 +31,7 @@ import PostHeader from "../components/PostHeader.astro";
       <section>
         <Covers
           title="Purgatory"
-          price="12.99"
+          price="12.99$"
           url="/src/images/covers/cover_purgatory.webp"
         />
       </section>
@@ -37,7 +39,7 @@ import PostHeader from "../components/PostHeader.astro";
       <section>
         <Covers
           title="Inferno"
-          price="12.99"
+          price="12.99$"
           url="/src/images/covers/cover_paradise.webp"
         />
       </section>
@@ -48,6 +50,6 @@ import PostHeader from "../components/PostHeader.astro";
   </main>
 </Layout>
 
-<footer class="">
+
   <Footer />
-</footer>
+

@@ -6,11 +6,18 @@ import Sections from "../components/Sections.astro";
 import Footer from "../components/Footer.astro";
 import MerchItems from "../components/MerchItems.astro";
 import SmokeBackground from "../components/SmokeBackground.astro";
+import PostHeader from "../components/PostHeader.astro";
 ---
 
 <Layout title="Divine">
-  <Header title="Divine" description="The Album of your dreams" />
-  <main class="flex justify-center">
+<PostHeader
+    section1="Home"
+    section2="Live"
+    link1="/"
+    link2="/Live"
+    />
+
+<main class="flex justify-center">
     <SmokeBackground/>
     <section class="mt-8">
       <div class="grid grid-cols-2 gap-4 gap-y-2 mb-2">

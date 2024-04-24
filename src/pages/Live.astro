@@ -1,4 +1,7 @@
 ---
+import PostHeader from "../components/PostHeader.astro";
+import SmokeBackground from "../components/SmokeBackground.astro";
+
 
 ---
 
@@ -10,7 +13,13 @@
     <title>Live</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <SmokeBackground/>
+    <PostHeader
+    section1="Home"
+    section2="Merch"
+    link1="/"
+    link2="/Merch"
+    />
 
 </body>
 </html>
