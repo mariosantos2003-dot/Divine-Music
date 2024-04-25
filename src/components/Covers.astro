@@ -32,10 +32,17 @@ const { title, price, url } = Astro.props;
         max-height: 100%;
       }
 
-      .cover-info{
+      .cover-container img {
+        transition: transform 0.3s ease-in-out;
+        border-radius: 1%;
+      }
+      .cover-container img:hover {
+        transform: scale(1.05);
+      }
+      .cover-info {
         text-align: center;
         justify-content: center;
-        
+        transition: transform 0.2s;
       }
 
       .cover-info h1 {
@@ -48,27 +55,26 @@ const { title, price, url } = Astro.props;
       .cover-info button {
         display: inline-block;
         padding: 8px 20px;
-    
+
         color: white;
         border-radius: 20px;
         text-decoration: none;
         transition: background-color 0.3s ease;
       }
 
-
+    
     </style>
   </head>
   <body>
     <section>
       <div class="cover-container">
         <img src={url} alt="Cover Number" />
-        </div>
-        <div class="cover-info">
-          <h1>{title}</h1>
-          <button><span>{price}</span></button>
-        </div>
-    
-   
+      </div>
+      <div class="cover-info">
+        <h1 class="pt-10">{title}</h1>
+        <h2><span>{price}</span></h2>
+        <a href="#" class="">Add to cart</a>
+      </div>
     </section>
     <slot />
   </body>
