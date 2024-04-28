@@ -33,9 +33,11 @@ const livedates = await db.select().from(LiveD);
           <th>Tickets</th>
         </tr>
         {
-          livedates.map(({ city, ticketsavailable }) => (
+          livedates.map(({ city, fecha, ticketsavailable }) => (
             <tr>
               <td>{city}</td>
+              <td>{new Date(fecha).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' })}</td> <!-- Formatear fecha -->
+
               <td>{ticketsavailable}</td>
             </tr>
           ))

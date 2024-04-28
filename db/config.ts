@@ -5,6 +5,7 @@ import { defineDb , defineTable, column} from 'astro:db';
     columns:{
         liveid :column.number({primaryKey: true}),
         city : column.text(),
+        fecha : column.date(),
         ticketsavailable : column.number(),
         isSouldOut : column.boolean()
 
