@@ -1,26 +1,47 @@
 ---
 import PostHeader from "../components/PostHeader.astro";
 import SmokeBackground from "../components/SmokeBackground.astro";
+import { db, LiveD } from "astro:db";
 
-
+const livedates = await db.select().from(LiveD);
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Live</title>
-</head>
-<body>
-    <SmokeBackground/>
+  </head>
+  <body>
+    <SmokeBackground />
     <PostHeader
-    section1="Home"
-    section2="Merch"
-    link1="/"
-    link2="/Merch"
-    link3="/"
+      section1="Home"
+      section2="Merch"
+      link1="/"
+      link2="/Merch"
+      link3="/"
     />
-
-</body>
+    <div>
+      <h2 class="flex text-center text-xl font-bold">LIVE DATES</h2>
+    </div>
+    <div class="flex justify-center items-center mt-4">
+      <table>
+        <tr>
+          <th>City</th>
+          <th>Date</th>
+          <th>Tickets</th>
+        </tr>
+        {
+          livedates.map(({ city, fecha, ticketsavailable }) => (
+            <tr>
+              <td>{city}</td>
+              <td>{fecha}</td>
+              <td>{ticketsavailable}</td>
+            </tr>
+          ))
+        }
+      </table>
+    </div>
+  </body>
 </html>
