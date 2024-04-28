@@ -23,18 +23,18 @@ const livedates = await db.select().from(LiveD);
       link3="/"
     />
     <div>
-      <h2 class="flex text-center text-xl font-bold">LIVE DATES</h2>
+      <h2 class="flex justify-center text-center text-xl font-bold pt-10">LIVE DATES</h2>
     </div>
     <div class="flex justify-center items-center mt-4">
-      <table>
-        <tr>
+      <table class=" w-full h-full items-center mt-10">
+        <tr class="text-left">
           <th>City</th>
           <th>Date</th>
           <th>Tickets</th>
         </tr>
         {
           livedates.map(({ city, fecha, ticketsavailable }) => (
-            <tr>
+            <tr class="">
               <td>{city}</td>
               <td>{new Date(fecha).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' })}</td> <!-- Formatear fecha -->
 
