@@ -33,10 +33,9 @@ const livedates = await db.select().from(LiveD);
           <th>Tickets</th>
         </tr>
         {
-          livedates.map(({ city, fecha, ticketsavailable }) => (
+          livedates.map(({ city, ticketsavailable }) => (
             <tr>
               <td>{city}</td>
-              <td>{fecha}</td>
               <td>{ticketsavailable}</td>
             </tr>
           ))
