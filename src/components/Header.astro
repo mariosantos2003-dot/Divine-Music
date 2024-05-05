@@ -8,7 +8,7 @@ interface Header{
 
 }
 const { section1, section2,link1,link2,link3 } = Astro.props;
-import ShoppingCart from "./ShoppingCart.astro";
+import Dropdown from "./Dropdown"
 
 ---
 
@@ -42,7 +42,7 @@ import ShoppingCart from "./ShoppingCart.astro";
     <a href={link3} id="header" class=" animate__animated animate__slideInDown">Divine</a>
     
   </div>
-  <ShoppingCart/>
+  <Dropdown/>
     <div class="text-white relative justify-center flex gap-10 pt-10 font-mono  text-3xl">
         <a href={link1} class="animate__animated animate__fadeInLeft ">{section1}</a>
        
