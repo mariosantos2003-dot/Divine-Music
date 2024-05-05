@@ -1,5 +1,5 @@
 ---
-import PostHeader from "../components/PostHeader.astro";
+import Header from "../components/Header.astro";
 import SmokeBackground from "../components/SmokeBackground.astro";
 import { db, LiveD } from "astro:db";
 
@@ -15,7 +15,7 @@ const livedates = await db.select().from(LiveD);
   </head>
   <body>
     <SmokeBackground />
-    <PostHeader
+    <Header
       section1="Home"
       section2="Merch"
       link1="/"

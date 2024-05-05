@@ -1,84 +1,53 @@
 ---
-interface Header {
-  title: string;
-  description: string;
-}
+interface Header{
+  section1 :string;
+  section2: string;
+  link1: string;
+  link2: string;
+  link3: string;
 
-const { title, description } = Astro.props;
+}
+const { section1, section2,link1,link2,link3 } = Astro.props;
+import ShoppingCart from "./ShoppingCart.astro";
 
 ---
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Header</title>
-  <style>
-    @font-face {
-      font-family: 'TirelesslyLoveYou';
-      src: url('../images/fonts/TirelesslyLoveYou.otf');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+ <style>
+  @font-face {
+      font-family: 'Header_font';
+      src: url('../images/fonts/Nightcore.otf');
     }
-    body {
-      margin: 0;
-      overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+
+    #header{
+      font-family: "Header_font";
+       
     }
-    header {
-      background-color: black;
-      color: #fff;
-      padding: 20px 0;
-      transition: all 0.5s ease-in;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      text-align: center;
-      font-size: 200px;
-      display: block;
-      font-family: 'TirelesslyLoveYou';
-      opacity: 1
-      ;
-    }
-    .small {
-      padding: 5px 0;
-      font-size: 18px;
-    }
-    .content {
-      padding: 20px;
-    }
-  </style>
+
+ </style>
 </head>
 <body>
-  <header id="header">
-    <div>
-      <h1>{title}</h1>
-      <h3>{description}</h3>
-    </div>
-  </header>
-
-
-  <script>
-    let isHeaderExpanded = false;
-
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      const header = document.getElementById("header") as HTMLElement;
-      const content = document.getElementsByClassName("content")[0] as HTMLElement;
-
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        if (!isHeaderExpanded) {
-          header.classList.add("small");
-          content.style.marginTop = "80px"; // Ajusta según la altura del header
-          isHeaderExpanded = true;
-        }
-      } else {
-        if (isHeaderExpanded) {
-          header.classList.remove("small");
-          content.style.marginTop = "0";
-          isHeaderExpanded = false;
-        }
-      }
-    }
-  </script>
+  
+  <div class="text-white relative justify-center flex gap-10 pt-10  text-5xl">
+    
+    <a href={link3} id="header" class=" animate__animated animate__slideInDown">Divine</a>
+    
+  </div>
+  <ShoppingCart/>
+    <div class="text-white relative justify-center flex gap-10 pt-10 font-mono  text-3xl">
+        <a href={link1} class="animate__animated animate__fadeInLeft ">{section1}</a>
+       
+      <a href={link2} class="animate__animated animate__fadeInRight">{section2}</a>
+        
+      </div>
 </body>
 </html>
