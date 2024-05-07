@@ -8,7 +8,7 @@ interface Header{
 
 }
 const { section1, section2,link1,link2,link3 } = Astro.props;
-import Dropdown from "./Dropdown"
+
 
 ---
 
@@ -25,7 +25,7 @@ import Dropdown from "./Dropdown"
  <style>
   @font-face {
       font-family: 'Header_font';
-      src: url('../images/fonts/Nightcore.otf');
+      src: url('src/images/fonts/Nightcore.otf');
     }
 
     #header{
@@ -42,7 +42,7 @@ import Dropdown from "./Dropdown"
     <a href={link3} id="header" class=" animate__animated animate__slideInDown">Divine</a>
     
   </div>
-  <Dropdown/>
+
     <div class="text-white relative justify-center flex gap-10 pt-10 font-mono  text-3xl">
         <a href={link1} class="animate__animated animate__fadeInLeft ">{section1}</a>
        

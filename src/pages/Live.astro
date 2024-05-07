@@ -1,6 +1,6 @@
 ---
-import Header from "../components/Header.astro";
-import SmokeBackground from "../components/SmokeBackground.astro";
+import Header from "../components/PrincipalUI/Header.astro";
+import SmokeBackground from "../components/PrincipalUI/SmokeBackground.astro";
 import { db, LiveD } from "astro:db";
 
 const livedates = await db.select().from(LiveD);
